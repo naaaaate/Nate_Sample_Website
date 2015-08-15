@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- describes how our page is formatted -->
+    <meta charset="utf-8">
+    <title>Nate Lee | Developer</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- put fonts below normalize and above custom css bc we will refer to fonts in our custom css -->
+    <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400,400italic,700,700italic,800' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="logo">
+        <h1> Nate Lee</h1>
+        <h2>Developer</h2>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="selected">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+      <div id="wrapper">
+      <section id="primary">
+        <h3>General Information</h3>
+        <p>I am available for new design and development work.</p>
+        <p>Please use phone contact for urgent inquiries. Otherwise, Twitter and email are the best way to reach me.</p>
+      </section>
+      <section id="secondary">
+        <h3>Contact Details</h3>
+        <ul class="contact-info">
+          <li class="phone"><a href="tel:555-6425">555-6425</a></li>
+          <li class="mail"><a href="mailto:nick@example.com">nate@example.com</a></li>
+          <li class="twitter"><a href="http://twitter.com/intent/tweet?screen_name=n8leedbc">@n8leedbc</a></li>
+        </ul>
+      </section>
+
+
+
+
+      <footer>
+         <!-- action is the web address of program that processes the info u submit in the form.. method is the http method browser uses to submit the form.. either post or get. post will send data from form and posted it to server. data is sent in the url and parameters are separated w ? marks. -->
+      <form action="index.html" method="post">
+        <h3>Sign Up.. or comment</h3>
+
+
+        <!-- fieldsets: used to gather info or data and use again somewhere -->
+        <fieldset>
+
+          <legend><span class= "number">1</span>Your basic info</legend>
+
+          <!-- for: associates label w particular form element and gives it focus when u click on it.. matches the id -->
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name"> <br>
+
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email"><br>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="user_password"><br>
+          <!-- type: what kind of input? email, tel, password etc.. -->
+          <!-- id: not requred but good to target w css or js -->
+          <!-- name: when form submitted to server, server can understand form data -->
+
+          <!-- radio buttons: -->
+          <label>Age:</label>
+          <input type="radio" id="under_13" value="under_13" name="user_age">
+          <label for="under_13" class="light"> Under 13 </label>
+          <br>
+          <input type="radio" id="over_13" value="over_13" name="user_age">
+          <label for="over_13" class="light">13 or older </label>
+          <!-- name: is the same here if we want radio buttons to be same part of same radio button group. -->
+
+        </fieldset>
+
+        <fieldset>
+
+           <legend><span class= "number">2</span>Your profile info</legend>
+
+          <label for="bio">Bio:</label>
+          <textarea id="bio" name="user_bio"></textarea><br>
+
+          <label for="job">Job role:</label>
+          <!-- select: is for a dropdown menu. -->
+          <select id="job" name="user_job">
+            <!-- optgroup: stands for options group to separate them -->
+              <optgroup label="Web">
+              <option value="frontend_developer">Front-End Developer</option>
+              <option value="php_developer">PHP Developer</option>
+              <option value="python_developer">Python Developer</option>
+              <option value="rails_developer">Rails Developer</option>
+              <option value="web_designer">Web Designer</option>
+              <option value="wordpress_developer">Wordpress Developer</option>
+            </optgroup>
+            <optgroup label="Mobile">
+              <option value="aindroid_designer">Android Developer</option>
+              <option value="ios_designer">iOS Developer</option>
+              <option value="mobile_designer">Mobile Designer</option>
+            </optgroup>
+            <optgroup label="Business">
+              <option value="business_owner">Business Owner</option>
+              <option value="freelancer">Freelancer</option>
+            <optgroup>
+          </select>
+
+          <!-- checkbox: -->
+          <label>Interests: </label>
+          <input type="checkbox" id="development" value="intrest_development" name="user_interest"><label class="light" for="development">Development</label><br>
+          <input type="checkbox" id="design" value="intrest_design" name="user_interest"><label class="light" for="design">Design</label><br>
+          <input type="checkbox" id="business" value="intrest_business" name="user_interest"><label class="light" for="business">Development</label>
+          <!-- class = light is built in css light color. -->
+
+        </fieldset>
+
+        <button type="submit">Sign up</button>
+        <!-- submit: submits data -->
+        <!-- reset: clears form data when clicked -->
+        <!-- button: no default behavior , used w js -->
+
+      </form>
+        <a href= "http://twitter.com/n8leedbc"><img src="img/twitter-wrap.png" alt="Twitter logo" class="social-icon"></a>
+        <a href= "http://facebook.com"><img src="img/facebook-wrap.png" alt="Facebook logo" class="social-icon"></a>
+        <p>&copy; 2015 Nate Lee.</p>
+      </footer>
+    </div>
+  </body>
+</html>
